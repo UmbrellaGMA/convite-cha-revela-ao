@@ -1,0 +1,53 @@
+/* Estilos globais e utilitários para Chá Revelação - Tema Ursinho Marrom Pastel */
+
+:root {
+  --color-cream: #FAF6F0;
+  --color-card-bg: #FFFFFF;
+  --color-pastel-brown: #8C684B;
+  --color-warm-brown: #745037;
+  --color-dark-brown: #5A3E2B;
+  --color-btn-brown: #946E50;
+  --color-btn-hover: #7E5B40;
+  --color-border-subtle: #E8DACB;
+}
+
+body {
+  font-family: 'Nunito', 'Montserrat', sans-serif;
+  background-color: #F8F3ED;
+  color: #5D4330;
+  margin: 0;
+  padding: 0;
+}
+
+/* Efeito de botão com traço pontilhado delicado da foto de referência */
+.btn-delicate {
+  background-color: #946E50;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 15px rgba(120, 85, 55, 0.25);
+}
+
+.btn-delicate:hover {
+  background-color: #7E5B40;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(120, 85, 55, 0.35);
+}
+
+.btn-delicate::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px dashed rgba(255, 255, 255, 0.45);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Cartão clássico estilo convite de papel */
+.invitation-card {
+  background: #FFFFFF;
+  border: 1px solid #E8DACB;
+  box-shadow: 0 10px 40px rgba(140, 104, 75, 0.12);
+  border-radius: 16px;
+}
