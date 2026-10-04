@@ -14,13 +14,15 @@ const App: React.FC = () => {
   const [guestInfo, setGuestInfo] = useState<GuestInfo | null>(null);
   const [isSpecialRN, setIsSpecialRN] = useState(false);
 
-  // Detectar rota especial: link.com/especial ou ?fralda=rn ou ?especial
+  // Detectar rota ou subdomínio especial: zoeouheitor.online/especial, especial.zoeouheitor.online ou ?fralda=rn
   useEffect(() => {
+    const host = window.location.hostname.toLowerCase();
     const path = window.location.pathname.toLowerCase();
     const search = window.location.search.toLowerCase();
     const hash = window.location.hash.toLowerCase();
 
     if (
+      host.includes('especial') ||
       path.includes('especial') ||
       search.includes('especial') ||
       search.includes('rn') ||
